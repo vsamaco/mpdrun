@@ -1,0 +1,287 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home matches snapshot 1`] = `
+<div>
+  <main
+    className="mx-auto max-w-screen-lg relative space-y-10"
+  >
+    <a
+      name="top"
+    />
+    <div
+      className="h-min-screen"
+    >
+      <div
+        className="py-10 px-5 sm:py-20 sm:px-10 flex flex-col justify-center"
+      >
+        <h1
+          className="mt-40 sm:mt-40 text-5xl sm:text-8xl"
+        >
+          milesperdonut
+        </h1>
+        <div
+          className="text-4xl sm:text-6xl opacity-50 flex flex-col pb-32"
+        >
+          <a
+            className="hover:underline text-yellow-400 uppercase"
+            href="#run"
+          >
+            RUN
+          </a>
+          <a
+            className="hover:underline text-blue-400"
+            href="#week"
+          >
+            WEEK
+          </a>
+          <a
+            className="hover:underline text-green-400"
+            href="#shoes"
+          >
+            SHOES
+          </a>
+          <a
+            className="hover:underline text-red-400"
+            href="#races"
+          >
+            RACES
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      className="h-min-screen bg-gray-100"
+    >
+      <a
+        name="run"
+      />
+      <div
+        className="py-10 px-5 sm:py-20 sm:px-10 flex flex-col justify-center border-t-4 border-yellow-300"
+      >
+        <h3
+          className="font-light text-8xl uppercase text-yellow-300"
+        >
+          Run
+        </h3>
+        <h4
+          className="text-5xl mt-3"
+        >
+          Activity Name
+        </h4>
+        <div
+          className="grid sm:grid-cols-1 md:grid-cols-2 mt-10"
+        >
+          <ul
+            className="text-4xl lg:text-6xl mt-10 font-light flex flex-col justify-end space-y-5 sm:mt-5"
+          >
+            <li
+              className="border-l-4 border-yellow-300 pl-2"
+            >
+              0.62 mi
+            </li>
+            <li
+              className="border-l-4 border-yellow-300 pl-2"
+            >
+              0h 6m
+            </li>
+            <li
+              className="border-l-4 border-yellow-300 pl-2"
+            >
+              0 ft
+            </li>
+          </ul>
+          <div
+            className="mt-10 sm:mt-5"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="h-min-screen bg-gray-100"
+    >
+      <a
+        name="week"
+      />
+      <div
+        className="py-10 px-5 sm:py-20 sm:px-10 flex flex-col justify-center border-t-4 border-blue-300"
+      >
+        <h2
+          className="text-8xl font-light text-blue-300"
+        >
+          WEEK
+        </h2>
+        <p
+          className="text-4xl mt-3 uppercase"
+        >
+          Invalid Date
+           
+          NaN
+           - 
+          NaN
+        </p>
+        <div
+          className="grid mt-10 grid-cols-1 md:grid-cols-3 sm:mt-10 md:mt-40 justify-center gap-5"
+        >
+          <div
+            className="w-full flex flex-col justify-center items-center border-b-4 border-blue-300 bg-white h-64"
+          >
+            <div
+              className="text-6xl text-right"
+              data-testid="distance-value"
+            >
+              0.62
+               mi
+            </div>
+            <div
+              className="text-2xl text-left mt-5 font-light"
+            >
+              DISTANCE
+            </div>
+          </div>
+          <div
+            className="flex flex-col justify-center items-center border-b-4 border-blue-300 bg-white h-64"
+          >
+            <div
+              className="text-6xl text-right"
+              data-testid="time-value"
+            >
+              0h 6m
+            </div>
+            <div
+              className="text-2xl text-left font-light mt-5"
+            >
+              TIME
+            </div>
+          </div>
+          <div
+            className="flex flex-col justify-center items-center border-b-4 border-blue-300 bg-white h-64"
+          >
+            <div
+              className="text-6xl text-right"
+              data-testid="elevation-value"
+            >
+              0
+               ft
+            </div>
+            <div
+              className="text-2xl text-lef font-light mt-5"
+            >
+              ELEVATION
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="h-min-screen bg-gray-100"
+    >
+      <a
+        name="shoes"
+      />
+      <div
+        className="py-10 px-5 sm:py-20 sm:px-10 flex flex-col justify-center border-t-4 border-green-300"
+      >
+        <h3
+          className="text-8xl flex flex-col justify-center font-light text-green-300"
+        >
+          SHOES
+        </h3>
+        <ul
+          className=" space-y-4 mt-20"
+        />
+      </div>
+    </div>
+    <div
+      className="h-min-screen bg-gray-100"
+    >
+      <a
+        name="races"
+      />
+      <div
+        className="py-10 px-5 sm:py-20 sm:px-10 flex flex-col justify-center border-t-4 border-red-400"
+      >
+        <h2
+          className="text-8xl font-light uppercase text-red-400"
+        >
+          Races
+        </h2>
+        <div
+          className="mt-20 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-end"
+        >
+          <div
+            className="bg-white border-red-400 border-b-4 px-10 py-20 w-full sm:w-72"
+          >
+            <div
+              className="text-5xl"
+            >
+              San Francisco Marathon
+            </div>
+            <div
+              className="text-lg mt-2"
+            >
+              SEP.19.2021
+            </div>
+            <div
+              className="text-right text-6xl mt-20 font-light"
+            >
+              26.2
+            </div>
+          </div>
+          <div
+            className="bg-white border-red-400 border-b-4 px-10 py-20 w-full sm:w-72"
+          >
+            <div
+              className="text-5xl"
+            >
+              Berkeley Half Marathon
+            </div>
+            <div
+              className="text-lg mt-2"
+            >
+              FEB.27.2022
+            </div>
+            <div
+              className="text-right text-6xl mt-20 font-light"
+            >
+              13.1
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fixed left-0 bottom-5"
+    >
+      <div
+        className="hidden text-md sm:flex sm:flex-col sm:justify-end"
+      >
+        <div
+          className="hidden sm:block"
+        >
+          SM
+        </div>
+        <div
+          className="hidden md:block"
+        >
+          MD
+        </div>
+        <div
+          className="hidden lg:block"
+        >
+          LG
+        </div>
+      </div>
+    </div>
+    <div
+      className="fixed right-5 bottom-5"
+    >
+      <a
+        className="text-3xl text-right"
+        href="#top"
+      >
+        TOP
+      </a>
+    </div>
+  </main>
+</div>
+`;

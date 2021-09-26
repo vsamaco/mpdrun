@@ -20,15 +20,15 @@ const Week = ({activities}) => {
 
       <div className="grid mt-10 grid-cols-1 md:grid-cols-3 sm:mt-10 md:mt-40 justify-center gap-5">
         <div className="w-full flex flex-col justify-center items-center border-b-4 border-blue-300 bg-white h-64">
-          <div className="text-6xl text-right">{Math.ceil(metersToMiles(weekDistance)).toLocaleString()} mi</div>
+          <div data-testid="distance-value" className="text-6xl text-right">{metersToMiles(weekDistance).toLocaleString()} mi</div>
           <div className="text-2xl text-left mt-5 font-light">DISTANCE</div>
         </div>
         <div className="flex flex-col justify-center items-center border-b-4 border-blue-300 bg-white h-64">
-          <div className="text-6xl text-right">{formatHumanizeSeconds(weekDuration)}</div>
+          <div data-testid="time-value" className="text-6xl text-right">{formatHumanizeSeconds(weekDuration)}</div>
           <div className="text-2xl text-left font-light mt-5">TIME</div>
         </div>
         <div className="flex flex-col justify-center items-center border-b-4 border-blue-300 bg-white h-64">
-          <div className="text-6xl text-right">{Math.ceil(metersToFeet(weekElevation)).toLocaleString()} ft</div>
+          <div data-testid="elevation-value" className="text-6xl text-right">{Math.ceil(metersToFeet(weekElevation)).toLocaleString()} ft</div>
           <div className="text-2xl text-lef font-light mt-5">ELEVATION</div>
         </div>
       </div>

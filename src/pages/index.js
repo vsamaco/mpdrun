@@ -17,7 +17,7 @@ export default function Home({activities, athlete}) {
 
       <main className="mx-auto max-w-screen-lg relative space-y-10">
       <a name="top" />
-      {activities.length &&  <div className="h-min-screen">
+      {activities && <div className="h-min-screen">
         <Hero activities={activities} />
       </div>}
 

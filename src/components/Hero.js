@@ -7,9 +7,9 @@ const MapWithNoSSR = dynamic(() => import("./ActivityMap"), {
 });
 
 const Hero = ({activities}) => {
-  const activity = activities[0];
-  const weeks = weeklyActivities(activities);
-  const { weekNumber } = weeks[0];
+  // const activity = activities[0];
+  // const weeks = weeklyActivities(activities);
+  // const { weekNumber } = weeks[0];
 
   return (
     <div className="py-10 px-5 sm:py-20 sm:px-10 flex flex-col justify-center">
