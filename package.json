@@ -6,15 +6,20 @@
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest --watch"
   },
   "dependencies": {
     "@mapbox/polyline": "^1.1.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.0",
+    "babel-jest": "^27.2.1",
     "chart.js": "^3.4.0",
     "d3": "^7.0.0",
     "dayjs": "^1.10.5",
     "geolib": "^3.3.1",
     "gpxparser": "^3.0.8",
+    "identity-obj-proxy": "^3.0.0",
     "leaflet": "^1.7.1",
     "next": "11.0.0",
     "react": "17.0.2",
@@ -22,6 +27,7 @@
     "react-d3": "^0.4.0",
     "react-dom": "17.0.2",
     "react-leaflet": "^3.2.0",
+    "react-test-renderer": "^17.0.2",
     "weeknumber": "^1.2.1"
   },
   "devDependencies": {
