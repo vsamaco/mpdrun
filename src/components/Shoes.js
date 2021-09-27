@@ -11,7 +11,7 @@ const Shoes = ({shoes}) => {
   ].map(shoeName => {
     const shoe = shoes.find(s => s.name === shoeName);
     return shoe ? {...shoe, distance: Math.ceil(metersToMiles(shoe.distance))} : null;
-  })
+  }).filter(x => x !== null);
 
   return (
     <div className="py-10 px-5 sm:py-20 sm:px-10 flex flex-col justify-center border-t-4 border-green-300">
