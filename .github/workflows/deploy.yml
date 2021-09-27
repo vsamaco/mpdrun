@@ -1,71 +1,49 @@
-name: CI
-on: [push]
-
+name: Continuous Deployment
+on:
+  push:
+    branches: [main]
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Begin linting
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-
-      - name: Use Node 14
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14.x
-
-      - name: Use cached node_modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: nodeModules-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            nodeModules-
-      
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Run ESLint
-        run: yarn lint
   test:
     runs-on: ubuntu-latest
-    needs: lint
     steps:
-      - name: Begin Testing
+      - name: Checkout code
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
 
-      - name: Use Node 14
+      - name: Setup Node
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
 
-      - name: Use cached node_modules
+      - name: Cache node_modules
         uses: actions/cache@v2
         with:
           path: node_modules
           key: nodeModules-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             nodeModules-
-      
+
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Run Tests
+      - name: Run test locally
         run: yarn test
-  deploy:
+
+  production: 
     runs-on: ubuntu-latest
     needs: test
     steps:
-      - uses: actions/checkout@v2
-      - uses: amondnet/vercel-action@v20
-        id: vercel-deployment
+      - name: Checkout main branch
+        uses: actions/checkout@v2
+
+      - name: Deploy site to production      
+        uses: amondnet/vercel-action@v20
+        id: deploy-vercel-production
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
+          vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
+          github-token: ${{ secrets.GITHUB_TOKEN }} 
+          vercel-args: '--prod'
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}  #Required
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required 
+          scope: ${{ secrets.VERCEL_ORG_ID }}
     outputs:
-      preview-url: ${{ steps.vercel-deployment.outputs.preview-url }}
+      preview-url: ${{ steps.vercel-production.outputs.preview-url }}
