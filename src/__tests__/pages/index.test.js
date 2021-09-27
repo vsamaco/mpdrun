@@ -2,7 +2,7 @@ import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 import renderer from 'react-test-renderer'
-import Home from '../index'
+import Home from '../../pages/index'
 
 describe('Home', () => {
   const athlete = {
