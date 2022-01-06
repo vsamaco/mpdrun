@@ -61,13 +61,38 @@ export default function Home({activities, athlete}) {
 
 }
 
+const authorizeApi = async () => {
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      identifier: process.env.NEXT_PUBLIC_STRAPI_EMAIL,
+      password: process.env.NEXT_PUBLIC_STRAPI_PASSWORD,
+    })
+  }
+  const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/auth/local`, options)
+  if (response.status === 200) {
+    return await response.json();
+  } else {
+    console.log('auth error', await response.text())
+  }
+}
+
 export async function getStaticProps() {
   console.log('ENV', process.env.NEXT_PUBLIC_STRAPI_URL);
+  const authResponse = await authorizeApi();
+  const authToken = authResponse.jwt;
+  const options = {
+    headers: {Authorization: 'Bearer ' + authToken}
+  }
+
   const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/activities?_sort=start_date:DESC`);
   const activities = await response.json();
 
-  const usersResponse = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/athletes`);
-  const [athlete] = await usersResponse.json(); 
+  const usersResponse = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/athletes`, options);
+  const [athlete] = await usersResponse.json();
   return { 
     props: {
       activities,
