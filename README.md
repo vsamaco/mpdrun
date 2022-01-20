@@ -18,16 +18,15 @@ Visit [https://mpdrun.vercel.app/](https://mpdrun.vercel.app/)
  - Tailwind CSS
 
  ## Setup
-  1. Setup vsrun server api project 
+  1. Setup vsrun server api project [https://github.com/vsamaco/vsrun-server-strapi](https://github.com/vsamaco/vsrun-server-strapi)
 
-    https://github.com/vsamaco/vsrun-server-strapi
+     Default api server configuration used in environment variables
 
-
-  Default api server configuration used in environment variables
-
+     ```
      STRAPI_URL=http://localhost:1337
      STRAPI_EMAIL=apiuser@example
      STRAPI_PASSWORD=apiuser
+     ```
 
   2. Copy .env.example to .env.local and update environment variables with api server configuration
 
@@ -54,7 +53,7 @@ Visit [https://mpdrun.vercel.app/](https://mpdrun.vercel.app/)
 
  ## Test
 
-  1. Run test 
+  1. Run jest test 
 
     yarn test
 
