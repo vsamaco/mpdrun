@@ -209,7 +209,26 @@ exports[`Home matches snapshot 1`] = `
           className="mt-20 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-end"
         >
           <div
-            className="bg-white border-red-400 border-b-4 px-10 py-20 w-full sm:w-72"
+            className="bg-white border-red-400 border-b-4 px-10 py-20 w-full sm:w-72 h-96 relative"
+          >
+            <div
+              className="text-5xl"
+            >
+              Oakland Marathon
+            </div>
+            <div
+              className="text-lg mt-2"
+            >
+              MAR.19.2023
+            </div>
+            <div
+              className="absolute bottom-10 text-right text-6xl mt-20 font-light"
+            >
+              26.2
+            </div>
+          </div>
+          <div
+            className="bg-white border-red-400 border-b-4 px-10 py-20 w-full sm:w-72 h-96 relative"
           >
             <div
               className="text-5xl"
@@ -219,31 +238,31 @@ exports[`Home matches snapshot 1`] = `
             <div
               className="text-lg mt-2"
             >
-              SEP.19.2021
+              JUL.23.2023
             </div>
             <div
-              className="text-right text-6xl mt-20 font-light"
+              className="absolute bottom-10 text-right text-6xl mt-20 font-light"
             >
               26.2
             </div>
           </div>
           <div
-            className="bg-white border-red-400 border-b-4 px-10 py-20 w-full sm:w-72"
+            className="bg-white border-red-400 border-b-4 px-10 py-20 w-full sm:w-72 h-96 relative"
           >
             <div
               className="text-5xl"
             >
-              Berkeley Half Marathon
+              Chicago Marathon
             </div>
             <div
               className="text-lg mt-2"
             >
-              FEB.27.2022
+              OCT.8.2023
             </div>
             <div
-              className="text-right text-6xl mt-20 font-light"
+              className="absolute bottom-10 text-right text-6xl mt-20 font-light"
             >
-              13.1
+              26.2
             </div>
           </div>
         </div>
