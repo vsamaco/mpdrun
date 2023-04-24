@@ -13,7 +13,8 @@ describe('Races', () => {
   it('renders races', () => {
     render(<Races />)
 
+    expect(screen.getByText(/Oakland Marathon/i)).toBeInTheDocument();
     expect(screen.getByText(/San Francisco Marathon/i)).toBeInTheDocument();
-    expect(screen.getByText(/Berkeley Half Marathon/i)).toBeInTheDocument();
+    expect(screen.getByText(/Chicago Marathon/i)).toBeInTheDocument();
   })
 })
