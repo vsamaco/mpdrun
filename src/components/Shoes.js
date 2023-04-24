@@ -1,18 +1,22 @@
 import React from 'react'
 import { metersToMiles } from '../utils/distance'
+import { parseShoeBrandModel } from '../utils/shoeBrand'
 
 const Shoes = ({shoes}) => {
   const selectedShoes = [
-    'Saucony Guide 13',
-    'New Balance Fresh Foam 1080v10',
-    'Saucony Endorphin Speed',
-    'Puma Liberate Nitro',
-    'Reebok FloatRide Energy 3'
+    'Saucony Ride 15',
+    'Saucony Triumph 19',
+    'Brooks Glycerin 20',
+    'adidas Adizero Pro 3'
   ].map(shoeName => {
     const shoe = shoes.find(s => s.name === shoeName);
-    return shoe ? {...shoe, distance: Math.ceil(metersToMiles(shoe.distance))} : null;
+    if (shoe) {
+      const {brand: brand_name, model: model_name} = parseShoeBrandModel(shoe.name);
+      return {...shoe, brand_name, model_name, distance: Math.ceil(metersToMiles(shoe.distance))};
+    }
+    return null;
   }).filter(x => x !== null);
-
+  console.log({selectedShoes})
   return (
     <div className="py-10 px-5 sm:py-20 sm:px-10 flex flex-col justify-center border-t-4 border-green-300">
       <h3 className="text-8xl flex flex-col justify-center font-light text-green-300">SHOES</h3>
