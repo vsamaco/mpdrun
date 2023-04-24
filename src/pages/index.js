@@ -25,7 +25,7 @@ export default function Home({activities, athlete}) {
       {activities && 
       <div className="h-min-screen bg-gray-100">
         <a name="run" />
-        <Run activity={activities[0]} />
+        <Run activities={activities} />
       </div>}
 
       {/* This week */}
@@ -63,7 +63,18 @@ export default function Home({activities, athlete}) {
 
 export async function getStaticProps() {
   console.log('ENV', process.env.NEXT_PUBLIC_STRAPI_URL);
+<<<<<<< Updated upstream
   const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/activities?_sort=start_date:DESC`);
+=======
+  const authResponse = await authorizeApi();
+  const authToken = authResponse.jwt;
+
+  const options = {
+    headers: {Authorization: 'Bearer ' + authToken}
+  }
+
+  const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/activities?_sort=start_date:DESC`, options);
+>>>>>>> Stashed changes
   const activities = await response.json();
 
   const usersResponse = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/athletes`);

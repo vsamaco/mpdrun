@@ -7,7 +7,10 @@ const MapWithNoSSR = dynamic(() => import("./ActivityMap"), {
   ssr: false
 });
 
-const Run = ({activity}) => {
+const Run = ({activities}) => {
+  const selectedActivityId = '8743095188';
+  const activity = activities.find((activity) => activity.external_id === selectedActivityId) || activities[0];
+
   const top_stats = [
     {
       label: 'distance',
