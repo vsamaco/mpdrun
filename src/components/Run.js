@@ -36,9 +36,11 @@ const Run = ({activities}) => {
             <li className="border-l-4 border-yellow-300 pl-2" key={stat.label}>{stat.value}</li>
           ))}
         </ul>
-        <div className="mt-10 sm:mt-5">
-          <MapWithNoSSR activity={activity} />
-        </div>
+        {activity && (
+          <div className="mt-10 sm:mt-5">
+            <MapWithNoSSR activity={activity} />
+          </div>
+        )}
       </div>
     </div>
   )

@@ -16,7 +16,7 @@ const Shoes = ({shoes}) => {
     }
     return null;
   }).filter(x => x !== null);
-  console.log({selectedShoes})
+
   return (
     <div className="py-10 px-5 sm:py-20 sm:px-10 flex flex-col justify-center border-t-4 border-green-300">
       <h3 className="text-8xl flex flex-col justify-center font-light text-green-300">SHOES</h3>
